@@ -1,4 +1,4 @@
-(function () {
+(function (Vue,axios) {
     // 对axios 进行封装
     let Axios = axios.create({
         baseURL: "https://apimusic.linweiqin.com/",
@@ -7,6 +7,7 @@
     // Add a request interceptor
     Axios.interceptors.request.use(function (config) {
         // Do something before request is sent
+        app.isLoading = true;
         return config;
     }, function (error) {
         // Do something with request error
@@ -17,6 +18,7 @@
     Axios.interceptors.response.use(function (response) {
         // Any status code that lie within the range of 2xx cause this function to trigger
         // Do something with response data
+        app.isLoading = false;
         return response.data;
     }, function (error) {
         // Any status codes that falls outside the range of 2xx cause this function to trigger
@@ -27,4 +29,4 @@
     window.Axios = Axios;
 
 
-})()
+})(Vue,axios)
