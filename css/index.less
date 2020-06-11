@@ -33,6 +33,7 @@
           justify-content: space-between;
           align-items: center;
           padding: 10px;
+          position: relative;
         .left {
          color: white;
          font-weight: 300;
@@ -48,6 +49,17 @@
   
           }
         }
+        // ul {
+        //   position: absolute;
+        //   border: 1px solid gold;
+        //   top:45px;
+        //   left: 503px;
+        //   li {
+        //     height: 20px;
+        //     width: 280px;
+        //     color: red;
+        //   }
+        // }
       }
   
       .app-content {
@@ -136,6 +148,30 @@
           animation-timing-function: linear;
           animation-iteration-count: infinite;
       }
+      .lyric{
+        height: 60px;
+        color: tomato;
+        width: 240px;
+        position: relative;
+      
+        margin-left: 50%;
+        transform:translateX(-50%);
+        margin-top: 380px;
+        overflow: hidden;
+        // border: 1px solid red;
+        .lyric-gesi{
+          width: 100%;
+          height: 10000px;
+          position: absolute;
+          // border: 1px solid gold;
+          text-align: center;
+          p{
+           color: white;
+        
+          }
+        }
+      }
+     
         }
   
         .right {
@@ -220,6 +256,22 @@
               z-index         : 888;
           }
       }
+      }
+    }
+    .loading {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255,255,255,.5);
+      z-index: 1000;
+      position: fixed;
+      .badyimg {
+       width: 200px;
+       height: 200px;
+       position: fixed;
+       left: 44%;
+       top: 36%;
+       transform: translate(-50% -50%);
+       z-index: 2000;
       }
     }
   }
